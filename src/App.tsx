@@ -1,14 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
+import TodoList from './components/TodoList';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>This is Brok's template app!</p>
-      </header>
-    </div>
+    <Container maxWidth="sm">
+      <Grid container justify="center" alignItems="center">
+        <Typography variant="h2">Todo List</Typography>
+      </Grid>
+      <TodoList />
+    </Container>
   );
 }
 
