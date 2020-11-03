@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-type TodoItem = {
+type Todo = {
   id: number,
   name: string,
   isChecked: boolean,
@@ -25,7 +25,7 @@ export default function TodoList({}: TodoListProps){
   const classes = useStyles();
 
   const [ nextTodoId, setNextTodoId ] = React.useState<number>(1);
-  const [ todoItems, setTodoItems ] = React.useState<TodoItem[]>([]);
+  const [ todoItems, setTodoItems ] = React.useState<Todo[]>([]);
 
   const handleToggle = (id: number) => () => {
 
@@ -64,7 +64,7 @@ export default function TodoList({}: TodoListProps){
 
   return(
     <List className={classes.root}>
-      {todoItems.map((todoItem: TodoItem) => {
+      {todoItems.map((todoItem: Todo) => {
         return (
           <TodoItem 
             key={todoItem.id}

@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import TodoList from './components/TodoList';
 
 function App() {
-
   return (
     <Container maxWidth="sm">
       <Grid container justify="center" alignItems="center">
